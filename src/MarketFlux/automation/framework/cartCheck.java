@@ -29,6 +29,7 @@ public class cartCheck {
 
         User.login(driver);
 
+        //TODO change seach word
         Search.txtbx_Search(driver).sendKeys("WBL-DEMO");
 
         Search.btn_Search(driver).click();
