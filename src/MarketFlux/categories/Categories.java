@@ -19,31 +19,32 @@ public class Categories {
 
     public WebElement link(WebDriver driver) {
 
-        elements = driver.findElements(By.xpath("//*[@id='st_advanced_menu_2']"));
+        elements = driver.findElements(By.xpath("//*[@id='st_advanced_menu']"));
 
         switch (category) {
             case HOME:
-                element = driver.findElement(By.xpath("//*[@id='st_advanced_menu_1']"));
+                element = elements.get(0);
+                //element = driver.findElement(By.xpath("//*[@id='st_advanced_menu_1']"));
                 break;
 
             case STATIONERY:
-                element = elements.get(0);
-                break;
-
-            case MARKETING:
                 element = elements.get(1);
                 break;
 
-            case PROMOTIONAL:
+            case MARKETING:
                 element = elements.get(2);
                 break;
 
-            case LABELS:
+            case PROMOTIONAL:
                 element = elements.get(3);
                 break;
 
-            case CLIENTS:
+            case LABELS:
                 element = elements.get(4);
+                break;
+
+            case CLIENTS:
+                element = elements.get(5);
                 break;
 
             default:
