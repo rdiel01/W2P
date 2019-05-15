@@ -3,15 +3,20 @@
 package MarketFlux.automation.framework;
 
 import MarketFlux.automation.tools.User;
+import MarketFlux.pageObjects.SideNav;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryList {
 
     private static WebDriver driver = null;
 
     private static WebElement element = null;
+    private static List<WebElement> elements = new ArrayList<WebElement>();
 
     public static void main(String[] args) {
 
@@ -23,6 +28,10 @@ public class CategoryList {
 
         User.login(driver);
 
+        elements = SideNav.Categories_Array(driver);
+
+        System.out.println(elements);
+        System.out.println(elements.size());
       // element = SideNav.Categories_Array(driver);
 
         //System.out.println(element);
