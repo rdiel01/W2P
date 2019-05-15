@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+//for individual product pages
 public class Product {
 
     private static WebElement element = null;
