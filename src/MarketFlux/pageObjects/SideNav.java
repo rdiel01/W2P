@@ -4,15 +4,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SideNav {
 
     private static WebElement element = null;
 
-    public static WebElement Categories_Array(WebDriver driver) {
+    private static List<WebElement> elements = new ArrayList<WebElement>();
 
-        element = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[1]/div/div/ul"));
+    public static List<WebElement> Categories_Array(WebDriver driver) {
 
-        return element;
+        //trying to get list/array of li elements from ul at home page. So far the element is empty
+        System.out.println(driver.findElements(By.xpath("//*[@class='tree']*//li")));
+
+        System.out.println(elements);
+
+        return elements;
     }
 
 }
