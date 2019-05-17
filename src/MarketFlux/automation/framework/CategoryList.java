@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class CategoryList {
 
@@ -27,6 +28,8 @@ public class CategoryList {
         driver = new ChromeDriver();
 
         User.login(driver);
+
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 
         elements = SideNav.Categories_Array(driver);
 
