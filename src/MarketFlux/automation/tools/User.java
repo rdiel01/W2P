@@ -1,8 +1,11 @@
 package MarketFlux.automation.tools;
 
-import MarketFlux.pageObjects.Login_Page;
+import MarketFlux.pageObjects.*;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class User {
@@ -13,7 +16,13 @@ public class User {
 
     private static String user_pw = "";
 
+    private static String user_selection = null;
+
     private static Scanner user_input = new Scanner(System.in);
+
+    private static List<WebElement> elements = new ArrayList<WebElement>();
+
+    private static WebElement element = null;
 
     public static void login(WebDriver driver) {
 
@@ -35,6 +44,29 @@ public class User {
         Login_Page.btn_LogIn(driver).click();
 
         System.out.println(String.format("Logged into Marketflux as %s", user_login));
+    }
+
+    public static void category_selector(WebDriver driver) {
+
+        while (user_selection != "") {
+            elements = SideNav.Categories_Array(driver);
+
+            for (WebElement element : elements) {
+                System.out.println(elements.indexOf(element) + " - " + element.getText());
+            }
+            System.out.println("Make a selection or return nothing to stop:");
+            user_selection = user_input.nextLine();
+
+            //user_selection of "" currently is not stopping the loop correctly
+            if (user_selection != "") {
+                int foo = Integer.parseInt(user_selection);
+                element = elements.get(foo);
+                element.click();
+            } else {
+                System.out.println("User has select to not go further.");
+            }
+
+        }
     }
 
 }
