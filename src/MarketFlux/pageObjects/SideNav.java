@@ -15,10 +15,7 @@ public class SideNav {
 
     public static List<WebElement> Categories_Array(WebDriver driver) {
 
-        //trying to get list/array of li elements from ul at home page. So far the element is empty
-        System.out.println(driver.findElements(By.xpath("//*[@class='tree']*//li")));
-
-        System.out.println(elements);
+        elements = driver.findElements(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[1]/div/div/ul/li"));
 
         return elements;
     }
