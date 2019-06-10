@@ -26,7 +26,7 @@ public class User {
 
         Login_Page.txtbx_UserName(driver).sendKeys(user_login);
 
-        System.out.println("Enter password for"+user_login+":");
+        System.out.println("Enter password for "+user_login+":");
 
         user_pw = user_input.nextLine();
 
