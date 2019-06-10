@@ -17,6 +17,8 @@ public class Home_Page {
 
     public static WebElement lnk_ListProducts(WebDriver driver) {
 
+        driver.findElement(By.xpath("/html/body/nav/ul/li[3]/a")).click();
+
         element = driver.findElement(By.xpath("/html/body/nav/ul/li[3]/ul/li[1]/a"));
 
         return element;
