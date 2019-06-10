@@ -63,4 +63,21 @@ public class ProdCat_ListProd {
 
         return element;
     }
+
+    public static WebElement btn_PriceTable(WebDriver driver) {
+
+        element = driver.findElement(By.xpath("/html/body/section/div[2]/ul/li[8]"));
+
+        return element;
+    }
+
+    public static WebElement btn_PriceTable_Edit(WebDriver driver) {
+
+        element = driver.findElement(By.xpath("/html/body/section/div[2]/div[8]/div[1]/div/table/tbody/tr/td[2]/a[2]"));
+
+        return element;
+    }
+
+
+
 }
