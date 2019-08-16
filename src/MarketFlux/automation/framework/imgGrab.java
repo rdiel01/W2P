@@ -131,16 +131,22 @@ public class imgGrab {
 
                     element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li["+index+"]/div/product-container/div/div[1]/a/img"));
 
-            image_src = element.getAttribute("src");
+                    image_src = element.getAttribute("src");
 
-            try {
-                URL url = new URL(image_src);
-                image = ImageIO.read(url);
-                ImageIO.write(image, "jpg", new File("/Users/ryandiel/Desktop/image_grab/"+prod_ID));
-            } catch (MalformedURLException ex) {
-                System.out.println("that URL is shite");
-            } catch (IOException e) {
-                System.out.println("I can't read that");
+                    try {
+                        URL url = new URL(image_src);
+                        image = ImageIO.read(url);
+                        ImageIO.write(image, "jpg", new File("/Users/mountain-dedede/Desktop/image_grab/"+prod_ID+".jpg"));
+                        System.out.println(prod_ID+" SUCSESS");
+                        break;
+                    } catch (MalformedURLException ex) {
+                        System.out.println(prod_ID+" failed - bad URL");
+                        break;
+                    } catch (IOException e) {
+                        System.out.println(prod_ID+" failed - can't read");
+                        break;
+                    }
+                }
             }
         }
     }
