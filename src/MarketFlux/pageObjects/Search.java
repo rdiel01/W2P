@@ -46,7 +46,7 @@ public class Search {
     }
     */
 
-    public static WebElement result_parse_productID (WebDriver driver) {
+    public static WebElement result_parse_productID(WebDriver driver) {
         //parses product ID from list of search results. Currently only pulls from BC cards on demo.ct.demo.
         element = driver.findElement(By.className("product-external-id"));
 
