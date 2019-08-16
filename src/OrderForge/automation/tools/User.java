@@ -17,6 +17,10 @@ public class User {
 
     private static Scanner user_input = new Scanner(System.in);
 
+    private static List<WebElement> elements = new ArrayList<WebElement>();
+
+    private static WebElement element = null;
+
     public static void login(WebDriver driver) {
 
         //TODO check it URL is up
