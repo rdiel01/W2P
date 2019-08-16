@@ -41,7 +41,7 @@ public class imgGrab {
 
         //set correct version of chromedriver. Chromedriver will need to be updated in Chrome is updated
         //TODO This should be a public variable so it can be updated in one place instead of every instance
-        System.setProperty("webdriver.chrome.driver","/Users/ryandiel/RBO Creative Tech Dropbox/Creative Technologies/WORKPLACE/#Ryan/File Cabinet/Dev/Java/JARs/chromedriver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/mountain-dedede/RBO Creative Tech Dropbox/Creative Technologies/WORKPLACE/#Ryan/File Cabinet/Dev/Java/JARs/chromedriver/chromedriver");
 
 
         prod_IDs.add("BC-DOC");
