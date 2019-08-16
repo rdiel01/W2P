@@ -55,19 +55,22 @@ public class User {
             for (WebElement element : elements) {
                 System.out.println(elements.indexOf(element) + " - " + element.getText());
             }
-            System.out.println("Make a selection or return nothing to stop:");
+            System.out.println("Select a category:");
             user_selection = user_input.nextLine();
 
-            //user_selection of "" currently is not stopping the loop correctly
-            if (user_selection != "") {
-                int foo = Integer.parseInt(user_selection);
-                element = elements.get(foo);
-                element.click();
+            if (!user_selection.equals("")) {
+                category_selection(user_selection);
             } else {
-                System.out.println("User has select to not go further.");
+                category_selectorMenu(driver);
             }
 
         }
+    }
+
+    public static void category_selection(String user_selection) {
+        int foo = Integer.parseInt(user_selection);
+        element = elements.get(foo);
+        element.click();
     }
 
 }
