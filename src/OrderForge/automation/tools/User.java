@@ -13,6 +13,8 @@ public class User {
 
     private static String user_pw = "";
 
+    private static String user_selection = null;
+
     private static Scanner user_input = new Scanner(System.in);
 
     public static void login(WebDriver driver) {
