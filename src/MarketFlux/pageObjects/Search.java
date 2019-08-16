@@ -3,12 +3,18 @@ package MarketFlux.pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Search {
 
     //only useful for single search results that provide one product. Not meant for search results that provide a list
     private static WebElement element = null;
+
+    private static List<WebElement> elements = new ArrayList<WebElement>();
 
     public static WebElement txtbx_Search(WebDriver driver) {
 
@@ -74,4 +80,47 @@ public class Search {
             System.out.println(prodName+" - "+prodId);
         }
 
+    }
 }
+
+
+/*
+    public static Boolean exact_match (WebDriver driver, String prodID, String li_prod_ID) {
+
+            elements = all_results(driver);
+
+        outerloop:
+        for (WebElement anElement : elements) {
+
+            int index = elements.indexOf(anElement)+1;
+
+            WebElement li_Element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li["+index+"]/div/product-container/div/div[2]/p[1]"));
+
+            String li_prod_ID = li_Element.getText();
+
+
+
+            if(li_prod_ID == prodID) {
+                //element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li["+(elements.indexOf(anElement)+1)+"]/div/product-container/div/div[2]/p[1]"));
+                System.out.println("match found for "+prodID);
+
+                element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li["+index+"]/div/product-container/div/div[1]/a/img"));
+
+                String src_front = "https://marketflux.foundrycommerce.com";
+                String src_back = element.getAttribute("src");
+                String src_full = src_front + src_back;
+
+                return src_full;
+            }
+
+            if(element != null) {
+
+                break outerloop;
+            }
+            }
+        //this needs to return a log error call.
+        return null;
+    }
+
+    }
+*/
