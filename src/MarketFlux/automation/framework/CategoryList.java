@@ -35,7 +35,11 @@ public class CategoryList {
 
         User.category_selectorMenu(driver);
 
-        User.category_selector(driver);
+        Search.view_all_results(driver);
+
+        Search.log_all_results(driver);
+
+        System.out.println("exited selector");
     }
 
 }
