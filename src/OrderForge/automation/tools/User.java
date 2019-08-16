@@ -1,8 +1,11 @@
 package OrderForge.automation.tools;
 
-import org.openqa.selenium.WebDriver;
 import OrderForge.pageObjects.Login_Page;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class User {
