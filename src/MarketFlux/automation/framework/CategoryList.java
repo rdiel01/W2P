@@ -30,7 +30,10 @@ public class CategoryList {
 
         User.login(driver);
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //TODO want to wait for page to load instead of implicitWait
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        User.category_selectorMenu(driver);
 
         User.category_selector(driver);
     }
