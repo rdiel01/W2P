@@ -3,8 +3,7 @@
 package MarketFlux.automation.framework;
 
 import MarketFlux.automation.tools.User;
-import MarketFlux.pageObjects.SideNav;
-import org.openqa.selenium.By;
+import MarketFlux.pageObjects.Search;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
