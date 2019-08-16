@@ -53,5 +53,25 @@ public class Search {
         return element;
     }
 
+    public static List<WebElement> all_results(WebDriver driver) {
+
+       // return driver.findElements(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li")); this worked for the AS image grab for some reason
+        return driver.findElements(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/div[2]/ul/li"));
+    }
+
+    public static void view_all_results(WebDriver driver) {
+        new Select(driver.findElement(By.xpath("//*[@id=\"productsSortFormTop\"]/div/select[2]"))).selectByVisibleText("All");
+
+    }
+
+    public static void log_all_results(WebDriver driver) {
+
+        for (WebElement anElement : all_results(driver)) {
+
+            String prodName = anElement.findElement(By.className("s_title_block")).getText();
+            String prodId = anElement.findElement(By.className("product-external-id")).getText();
+
+            System.out.println(prodName+" - "+prodId);
+        }
 
 }
