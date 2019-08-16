@@ -118,7 +118,18 @@ public class imgGrab {
 
             Search.btn_Search(driver).click();
 
-            element = Search.get_imgSrc(driver);
+            elements = Search.all_results(driver);
+//what do if search result is null? Need to catch this and Return no results to console
+            for (WebElement anElement : elements) {
+                int index = elements.indexOf(anElement)+1;
+
+                WebElement li_Element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li["+index+"]/div/product-container/div/div[2]/p[1]"));
+
+                String li_prod_ID = li_Element.getText();
+
+                if (prod_ID.equals(li_prod_ID)) {
+
+                    element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li["+index+"]/div/product-container/div/div[1]/a/img"));
 
             image_src = element.getAttribute("src");
 
