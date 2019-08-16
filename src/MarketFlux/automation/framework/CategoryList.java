@@ -23,8 +23,9 @@ public class CategoryList {
     public static void main(String[] args) {
 
         //set correct version of chromedriver. Chromedriver will need to be updated in Chrome is updated
-        //TODO This should be a public variable so it can be updated in one place instead of every instance
-        System.setProperty("webdriver.chrome.driver", "/Users/ryandiel/RBO Creative Tech Dropbox/Creative Technologies/WORKPLACE/#Ryan/File Cabinet/Dev/Java/JARs/chromedriver/chromedriver");
+        //TODO This should be a public variable so it can be updated in one place instead of every instance/framework.
+        //todo try to see if this can be updated automatically through maven or github
+        System.setProperty("webdriver.chrome.driver", "/Users/mountain-dedede/RBO Creative Tech Dropbox/Creative Technologies/WORKPLACE/#Ryan/File Cabinet/Dev/Java/JARs/chromedriver/chromedriver");
 
         driver = new ChromeDriver();
 
