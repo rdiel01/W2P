@@ -49,7 +49,7 @@ public class User {
     public static void category_selector(WebDriver driver) {
         //TODO I want this to have a method as a parameter to allow for more versatility
 
-        while (user_selection != "") {
+        while (SideNav.Category_check(driver)) {
             elements = SideNav.Categories_Array(driver);
 
             for (WebElement element : elements) {

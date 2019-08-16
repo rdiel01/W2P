@@ -20,4 +20,11 @@ public class SideNav {
         return elements;
     }
 
+    public static Boolean Category_check(WebDriver driver) {
+
+        elements = driver.findElements(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[1]/div/div/ul/li"));
+
+        return !elements.isEmpty();
+
+    }
 }
