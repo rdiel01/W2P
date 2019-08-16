@@ -25,6 +25,8 @@ public class imgGrab {
 
     private static WebElement element = null;
 
+    private static List<WebElement> elements = new ArrayList<WebElement>();
+
     private static String image_src = null;
 
     private static BufferedImage image = null;
