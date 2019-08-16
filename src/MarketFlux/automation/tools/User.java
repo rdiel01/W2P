@@ -46,7 +46,7 @@ public class User {
         System.out.println(String.format("Logged into Marketflux as %s", user_login));
     }
 
-    public static void category_selector(WebDriver driver) {
+    public static void category_selectorMenu(WebDriver driver) {
         //TODO I want this to have a method as a parameter to allow for more versatility
 
         while (SideNav.Category_check(driver)) {
