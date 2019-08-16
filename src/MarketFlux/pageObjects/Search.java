@@ -24,14 +24,14 @@ public class Search {
         return element;
     }
 
-    public static WebElement btn_View_Product (WebDriver driver) {
+    public static WebElement btn_View_Product(WebDriver driver) {
 
         element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li/div/product-container/div/div[2]/div[3]/a"));
 
         return element;
     }
 
-    public static WebElement get_imgSrc (WebDriver driver) {
+    public static WebElement get_imgSrc(WebDriver driver) {
         element = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div/div[2]/div/ul/li/div/product-container/div/div[1]/a/img"));
 
         return element;
