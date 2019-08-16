@@ -1,7 +1,9 @@
 package MarketFlux.automation.framework;
 
 import MarketFlux.automation.tools.User;
-import MarketFlux.pageObjects.*;
+import MarketFlux.pageObjects.Category_Nav;
+import MarketFlux.pageObjects.Search;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class imgGrab {
