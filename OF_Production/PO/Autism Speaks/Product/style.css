@@ -1,0 +1,23 @@
+<style type="text/css">.SpecLabel {
+	font-weight: bold;
+	color: #51748b;
+	font-size: 12px;
+}
+.SpecBody {
+	font-weight: normal;
+	color: #545759;
+	font-size: 14px;
+}
+.SpecHeads {
+	font-weight: bold;
+	color: #51748b;
+	font-size: 14px;
+}
+
+.left {
+	float: left;
+}
+.floatclear {
+	clear: both;
+}
+</style>
