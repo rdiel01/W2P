@@ -1,5 +1,5 @@
-//variant list product - preview image script - apply dropdown selection to grid - ordering grid minimum quantity lockout
-        marketFluxModule.directive('specFormCustomizations', function ($compile) {
+//variant list product - preview image script - apply dropdown selection to grid - ordering grid minimum quantity lockout 
+marketFluxModule.directive('specFormCustomizations', function ($compile) {
             var controller = [
                 '$scope', '$timeout', function ($scope, $timeout) {
                     //Call defined customization function (Per product stuff)
@@ -19,17 +19,6 @@
                         updatePreview();
                         updateVariant();
     
-                            
-                    });
-
-                    $scope.$watch('theSize.Selected', function (val) {
-    
-                        console.log('the size changed: ' + val);
-    
-                        updatePreview();
-                        updateVariant();
-    
-                            
                     });
 
                     $scope.$watch('theModelList', function (val) {
@@ -44,9 +33,10 @@
     
                         console.log('the color changed: ' + val);
     
+                        if ($scope.theLogo) {
                         updatePreview();
-    
-                            
+                        }
+
                     });
 
                     function checkTotalQuantity() {
